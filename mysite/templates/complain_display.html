@@ -2,6 +2,31 @@
 
 {% block body %}
 
+<div class="container m-3">
+    <button onclick="window.location.href = 'http://127.0.0.1:8000/register';" type="button" id="new_complaint" class="btn btn-danger" style="float: right;">New Complaint</button>
+</div>
+<div class="container m-5">
+    <table align="center" style="border: 3px solid black;">
+        <tr>
+            <th style="border: 3px solid black; padding: 10px;">S No.</th>
+            <th style="border: 3px solid black; padding: 10px;">Name of Complainer</th>
+            <th style="border: 3px solid black; padding: 10px;">Title</th>
+            <th style="border: 3px solid black; padding: 10px;">Date.</th>
+            <th style="border: 3px solid black; padding: 10px;">Description</th>
+        </tr>
 
+        {% for complain in object_list %}
+
+                <tr>
+                    <td style="border: 3px solid black; padding: 10px;">{{ forloop.counter }}</td>
+                    <td style="border: 3px solid black; padding: 10px;">{{ complain.name }}</td>
+                    <td style="border: 3px solid black; padding: 10px;"> {{ complain.title }}</td>
+                    <td style="border: 3px solid black; padding: 10px;">{{ complain.description }}</td>
+                    <td style="border: 3px solid black; padding: 10px;">{{ complain.date }}</td>
+                </tr>
+
+        {% endfor %}
+    </table>
+</div>
 
 {% endblock body %}
