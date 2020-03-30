@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <img class="mx-auto d-block" src={% static 'success.png' %} style="width:70%; height:auto;">
+        </div>
+        <div class="col-sm-8">
+            <p class="mt-5" style="font-size: 40px; color: green;"> Complaint registered successfully !!! </p>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

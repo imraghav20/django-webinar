@@ -19,5 +19,7 @@ from complain import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.register, name="register")
+    path('', views.register, name="register"),
+    path('success', views.success, name="success"),
+    path('fail', views.fail, name="fail"),
 ]
